@@ -1,0 +1,30 @@
+body
+  overflow-y: scroll
+
+html, body
+  background: $background_brand
+
+#application-container
+  position: relative
+  height: 100%
+
+#application-header
+  padding: $spacing_v 0
+  background: $background_white
+  border-top: .2em solid $color_brand
+  border-bottom: 1px solid $border_default
+
+#application-menu
+  float: right
+  margin-right: 0
+  padding-bottom: 13px
+  transition: opacity .1s ease,background-color .1s ease,color .1s ease,box-shadow .1s ease,background .1s ease
+
+#application-search
+  float: right
+
+.application-wrapper
+  @extend .clearfix
+  width: 95%
+  max-width: 920px
+  margin: auto

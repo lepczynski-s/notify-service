@@ -1,0 +1,28 @@
+<div>
+
+  <div class="content-section">
+    <h1>
+      <%= @title %>
+
+      <button form="identity-form" class="ui right floated green wide button">
+        <i class="check icon"></i><%= caption_for :save %>
+      </button>
+
+      <a href="<%= url_for(:dashboard, :index) %>" class="ui right floated gray wide button">
+        <i class="remove icon"></i><%= caption_for :cancel %>
+      </a>
+    </h1>
+  </div>
+
+  <div class="content-section">
+
+    <%= partial '/common/forms/identity_form', :locals => {
+      :identity => @identity,
+      :adapters_options => @adapters_options,
+      :path => url_for(:identities, :create),
+      :method => 'post'
+    } %>
+
+  </div>
+
+</div>

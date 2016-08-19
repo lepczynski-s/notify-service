@@ -1,0 +1,17 @@
+<% form_for template, path, :id => 'template-form', :method => method do |f| %>
+
+  <%= f.additional_problems_message %>
+
+  <div class="form-section">
+    <%= f.text_field_block :name, :caption => caption_for(:name) %>
+  </div>
+
+  <div class="form-section">
+    <%= f.text_area_block :content, :rows => 32, :caption => caption_for(:content) %>
+  </div>
+
+  <div class="form-section">
+    <%= partial '/common/misc/form_timestamps', :locals => {:f => f} %>
+  </div>
+
+<% end %>

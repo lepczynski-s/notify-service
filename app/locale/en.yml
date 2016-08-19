@@ -1,0 +1,52 @@
+en:
+
+  titles:
+    dashboard: 'Dashboard'
+    create: 'Create %{model}'
+    edit: 'Edit %{model}'
+
+  messages:
+    error_404: 'Requested page does not exists'
+    error_500: 'Application encountered an internal error'
+    created: '%{model} have been created'
+    updated: '%{model} have been updated'
+    failed: '%{model} is not valid and cannot be saved'
+    empty: 'There are no %{models} entities to display'
+
+  models:
+    Identity: 'Identity'
+    Adapter: 'Adapter'
+    Template: 'Template'
+
+  lists:
+    Identity: 'Identities'
+    Adapter: 'Adapters'
+    Template: 'Templates'
+
+  captions:
+    save: 'Save'
+    create: 'Create'
+    edit: 'Edit'
+    cancel: 'Cancel'
+    delete: 'Delete'
+    id: 'ID'
+    key: 'Key'
+    name: 'Name'
+    content: 'Content'
+    token: 'Token'
+    secret: 'Secret'
+    sender: 'Sender'
+    client: 'Client'
+    host: 'Host'
+    user: 'User'
+    pass: 'Password'
+    port: 'Port'
+    email_adapter: 'Email adapter'
+    phone_adapter: 'Phone adapter'
+    updated_at: 'Updated at'
+    created_at: 'Created at'
+
+  errors:
+    additional_problems_header: 'Form cannot be processed because of additional problems'
+    validation:
+      composite_index: '%{index} combination is already taken'

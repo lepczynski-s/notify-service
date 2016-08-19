@@ -1,0 +1,27 @@
+<div>
+
+  <div class="content-section">
+    <h1>
+      <%= @title %>
+
+      <button form="template-form" class="ui right floated blue wide button">
+        <i class="check icon"></i><%= caption_for :save %>
+      </button>
+
+      <a href="<%= url_for(:dashboard, :index) %>" class="ui right floated gray wide button">
+        <i class="remove icon"></i><%= caption_for :cancel %>
+      </a>
+    </h1>
+  </div>
+
+  <div class="content-section">
+
+    <%= partial '/common/forms/template_form', :locals => {
+      :template => @template,
+      :path => url_for(:templates, :edit, @template.id),
+      :method => 'put'
+    } %>
+
+  </div>
+
+</div>

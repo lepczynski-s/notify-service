@@ -1,0 +1,8 @@
+---
+:orm: sequel
+:test: cucumber
+:mock: mocha
+:script: none
+:renderer: erb
+:namespace: NotifyService
+:migration_format: number

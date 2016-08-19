@@ -1,0 +1,32 @@
+<% form_for identity, path, :id => 'identity-form', :method => method do |f| %>
+
+  <%= f.additional_problems_message %>
+
+  <div class="form-section">
+    <%= f.text_field_block :name, :caption => caption_for(:name) %>
+
+    <%= f.select_block(
+      :email_adapter_id,
+      :caption => caption_for(:email_adapter),
+      :collection => adapters_options,
+      :fields => [:name, :id]
+    ) %>
+
+    <%= f.select_block(
+      :phone_adapter_id,
+      :caption => caption_for(:phone_adapter),
+      :collection => adapters_options,
+      :fields => [:name, :id]
+    ) %>
+  </div>
+
+  <div class="form-section">
+    <%= f.text_field_block :token, :caption => caption_for(:token), :disabled => true %>
+    <%= f.text_field_block :secret, :caption => caption_for(:secret), :disabled => true %>
+  </div>
+
+  <div class="form-section">
+    <%= partial '/common/misc/form_timestamps', :locals => {:f => f} %>
+  </div>
+
+<% end %>

@@ -1,0 +1,47 @@
+<% if !flash.empty? %>
+  <div class="content-section flash-messages">
+
+    <% flash.each do |type, message| %>
+
+      <% if type == :success %>
+
+        <div class="ui success icon message">
+          <i class="check icon"></i>
+          <div class="content">
+            <p><%= message %></p>
+          </div>
+        </div>
+
+      <% elsif type == :info %>
+
+        <div class="ui info icon message">
+          <i class="info icon"></i>
+          <div class="content">
+            <p><%= message %>
+          </div>
+        </div>
+
+      <% elsif type == :warning %>
+
+        <div class="ui warning icon message">
+          <i class="warning icon"></i>
+          <div class="content">
+            <p><%= message %>
+          </div>
+        </div>
+
+      <% elsif type == :error %>
+
+        <div class="ui negative icon message">
+          <i class="remove icon"></i>
+          <div class="content">
+            <p><%= message %></p>
+          </div>
+        </div>
+
+      <% end %>
+
+    <% end %>
+
+  </div>
+<% end %>

@@ -1,0 +1,21 @@
+<div>
+
+  <div class="content-section">
+    <%= partial '/common/lists/identities_list', :locals => {
+      :identities => @identities
+    } %>
+  </div>
+
+  <div class="content-section">
+    <%= partial '/common/lists/adapters_list', :locals => {
+      :adapters => @adapters
+    } %>
+  </div>
+
+  <div class="content-section">
+    <%= partial '/common/lists/templates_list', :locals => {
+      :templates => @templates
+    } %>
+  </div>
+
+</div>

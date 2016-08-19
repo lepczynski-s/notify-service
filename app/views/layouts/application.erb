@@ -1,0 +1,65 @@
+<html>
+
+<head>
+  <title><%= @title %> - Notify Service</title>
+  <link href="https://opensource.keycdn.com/fontawesome/4.6.1/font-awesome.min.css " rel="stylesheet" type="text/css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css" rel="stylesheet" type="text/css">
+
+  <%= favicon_tag '/shared/favicon.ico?v=1' %>
+  <%= stylesheet_link_tag '/shared/application' %>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.0.0.beta4/turbolinks.js"></script>
+  <%= javascript_include_tag '/shared/application' %>
+</head>
+
+<body>
+  <div id="application-container">
+
+      <div id="application-header">
+        <div class="application-wrapper">
+          <a href="<%= url_for(:dashboard, :index) %>" id="application-logo">
+            <%= image_tag '/shared/logo.svg', :width => '150', :height => '36' %>
+          </a>
+
+          <div class="ui top right pointing dropdown icon button" id="application-menu">
+            <i class="setting icon"></i>
+            <div class="menu">
+              <div class="header">Other services</div>
+              <div class="item">Status</div>
+              <div class="item">Identity</div>
+              <div class="item">Notify</div>
+              <div class="ui divider"></div>
+              <div class="item">Logout</div>
+            </div>
+          </div>
+
+          <div class="ui floating dropdown labeled search icon button" id="application-search">
+            <i class="world icon"></i>
+            <span class="text">Search in services...</span>
+            <div class="menu">
+              <div class="item">Some</div>
+              <div class="item">results</div>
+              <div class="item">will</div>
+              <div class="item">be here!</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="application-content">
+        <div class="application-wrapper">
+
+          <%= partial '/common/misc/flash_messages' %>
+
+          <%= yield %>
+
+        </div>
+      </div>
+
+  </div>
+</body>
+
+</html>

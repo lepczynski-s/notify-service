@@ -1,0 +1,22 @@
+<% form_for adapter, path, :id => 'adapter-form', :method => method do |f| %>
+
+  <%= f.additional_problems_message %>
+
+  <div class="form-section">
+    <%= f.text_field_block :name, :caption => caption_for(:name) %>
+    <%= f.text_field_block :sender, :caption => caption_for(:sender) %>
+  </div>
+
+  <div class="form-section">
+    <%= f.select_block :client, :caption => caption_for(:client), :options => mail_clients_options %>
+    <%= f.text_field_block :host, :caption => caption_for(:host) %>
+    <%= f.text_field_block :user, :caption => caption_for(:user) %>
+    <%= f.text_field_block :pass, :caption => caption_for(:pass) %>
+    <%= f.text_field_block :port, :caption => caption_for(:port) %>
+  </div>
+
+  <div class="form-section">
+    <%= partial '/common/misc/form_timestamps', :locals => {:f => f} %>
+  </div>
+
+<% end %>
